@@ -29,6 +29,16 @@ import Reel from '@/app/_assets/images/reel_cat.png';
 //@ts-ignore
 import Marketing from '@/app/_assets/images/marketing_cat.png';
 
+//@ts-ignore
+import TvcOne from '@/app/_assets/images/tvc/1.png';
+//@ts-ignore
+import TvcTwo from '@/app/_assets/images/tvc/2.png';
+//@ts-ignore
+import TvcThree from '@/app/_assets/images/tvc/3.png';
+//@ts-ignore
+import TvcFour from '@/app/_assets/images/tvc/4.png';
+
+
 import { VideoPlayer } from '@/app/_components/widgets/video-player';
 
 const styles = StyleSheet.create( {
@@ -40,6 +50,10 @@ const styles = StyleSheet.create( {
 	slide: {
 		width: SCREEN_WIDTH,
 		height: SCREEN_HEIGHT
+	},
+	tvcCategory: {
+		width: SCREEN_WIDTH,
+		height: 400
 	}
 })
 
@@ -49,7 +63,7 @@ export const onBoardingSlides: onBoardingSlidesTypes[] = [
 	  color: "rgba(0,0,0,0.9)",
 	  title: "اكتشف",
 	  resource: (
-		  <VideoPlayer videoUri={compistionVideo} />
+		  <VideoPlayer height={SCREEN_HEIGHT} videoUri={compistionVideo} />
 	  ),
 	  subTitle: "الابداع",
 	  description:
@@ -89,6 +103,7 @@ export const categories: categoryTypes[] = [
 	{
 		id: '1',
 		title: 'Graphic Design',
+		href: '/',
 		resource: (
 			<Image
 			source={Design}
@@ -99,6 +114,7 @@ export const categories: categoryTypes[] = [
 	{
 		id: '2',
 		title: 'TVC',
+		href: '/(routes)/(categories)/tvc',
 		resource: (
 			<Image
 			source={Tvc}
@@ -109,6 +125,7 @@ export const categories: categoryTypes[] = [
 	{
 		id: '3',
 		title: 'Printing',
+		href: '/',
 		resource: (
 			<Image
 			source={Printing}
@@ -119,6 +136,7 @@ export const categories: categoryTypes[] = [
 	{
 		id: '4',
 		title: 'Reel',
+		href: '/',
 		resource: (
 			<Image
 			source={Reel}
@@ -129,6 +147,7 @@ export const categories: categoryTypes[] = [
 	{
 		id: '5',
 		title: 'Copy Writing',
+		href: '/',
 		resource: (
 			<Image
 			source={Copy}
@@ -139,6 +158,7 @@ export const categories: categoryTypes[] = [
 	{
 		id: '6',
 		title: 'Motion Graphic',
+		href: '/',
 		resource: (
 			<Image
 			source={Motion}
@@ -149,6 +169,7 @@ export const categories: categoryTypes[] = [
 	{
 		id: '7',
 		title: 'Marketing',
+		href: '/',
 		resource: (
 			<Image
 			source={Marketing}
@@ -159,6 +180,7 @@ export const categories: categoryTypes[] = [
 	{
 		id: '8',
 		title: 'Website',
+		href: '/',
 		resource: (
 			<Image
 			source={Web}
@@ -169,6 +191,7 @@ export const categories: categoryTypes[] = [
 	{
 		id: '9',
 		title: 'Mobile App',
+		href: '/',
 		resource: (
 			<Image
 			source={App}
@@ -176,4 +199,32 @@ export const categories: categoryTypes[] = [
 		 />
 		)
 	},
-]
+];
+
+export const tvcCategory = {
+	assets: {
+		video: <VideoPlayer height={ SCREEN_HEIGHT / 3 } videoUri={ compistionVideo } />,
+		images: [
+			<Image
+			contentFit='cover'
+			contentPosition='center'
+			source={TvcOne}
+			style={styles.tvcCategory}
+		 />,
+			<Image
+			contentFit='cover'
+			contentPosition='center'
+			source={TvcTwo}
+			style={styles.tvcCategory}
+		 />,
+			<Image
+			source={TvcThree}
+			style={styles.tvcCategory}
+		 />,
+			<Image
+			source={TvcFour}
+			style={styles.tvcCategory}
+		 />,
+		]
+	}
+}

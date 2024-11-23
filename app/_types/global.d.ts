@@ -11,4 +11,5 @@ type categoryTypes = {
 	id: string;
 	title: string;
 	resource: any;
+	href: string;
 }

@@ -30,10 +30,11 @@ const RootLayout: FC = (): ReactNode => {
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack screenOptions={ { headerShown: false}}>
-        <Stack.Screen name="(tabs)" />
-        <Stack.Screen name='(routes)/onboarding/index'/>
+    <ThemeProvider value={DarkTheme}>
+      <Stack screenOptions={ { animation: 'fade' } }>
+        <Stack.Screen name="(tabs)" options={{headerShown: false}}/>
+        <Stack.Screen name='(routes)/onboarding/index' options={{headerShown: false}}/>
+        <Stack.Screen name='(routes)/(categories)/tvc/index' options={{title: 'TVC'}} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />

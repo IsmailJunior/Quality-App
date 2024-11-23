@@ -2,16 +2,17 @@ import { type FC, type ReactNode } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SafeAreaView from 'react-native-safe-area-view';
 
-import { HomeScreen } from '@/app/_screens/home.screen';
+import { TvcCategoryScreen } from '@/app/_screens/tvc-category.screen';
 
 const index: FC = (): ReactNode =>
 {
-  return (
-    <SafeAreaProvider>
+	return (
+		<SafeAreaProvider>
 		<SafeAreaView style={ { flex: 1 } } forceInset={ { top: 'always', bottom: 'always' } }>
-        <HomeScreen />
-      </SafeAreaView>
-    </SafeAreaProvider>	
-  );
-}
+			<TvcCategoryScreen />
+		</SafeAreaView>
+	</SafeAreaProvider>
+	)
+};
+
 export default index;

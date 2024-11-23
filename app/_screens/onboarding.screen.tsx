@@ -1,5 +1,5 @@
 import {type FC, type ReactNode} from 'react';
-import { FlatList, Animated, View, StyleSheet} from 'react-native';
+import { Animated, View, StyleSheet} from 'react-native';
 import { useOnboardingSlider } from '@/app/_hooks/use-onboarding-slider.hook';
 import { Slider } from '@/app/_components/widgets/slider';
 
@@ -23,7 +23,7 @@ export const OnboardingScreen: FC = (): ReactNode =>
 	return (
 		<Slider.Root>
 			<View style={[{flex: 1}, StyleSheet.absoluteFill]}>
-			<FlatList
+				<Animated.FlatList
 				data={ onBoardingSlides }
 				renderItem={ _renderItem }
 				horizontal
