@@ -12,4 +12,12 @@ type categoryTypes = {
 	title: string;
 	resource: any;
 	href: string;
+};
+
+type userType = {
+	firstName: string;
+	lastName: string;
+	username: string;
+	password: string;
+	passwordConfirm: string;
 }
