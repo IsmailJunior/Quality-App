@@ -7,7 +7,7 @@ export const useOnboarding = () =>
 	const [ loggedUser, setLoggedUser ] = useState<boolean>( false );
 	const [ loading, setLoading ] = useState<boolean>( true );
 	const [ onboarding, setOnboarding ] = useState<boolean>( false );
-
+	const [ isGuest, setIsGuest ] = useState<boolean>( false );
 
 	const checkOnboarding = async () =>
 		{
@@ -26,10 +26,29 @@ export const useOnboarding = () =>
 			 setLoading(false)
 		  }
 	}
+
+	const checkGuest = async () =>
+	{
+		try
+		{
+			const value = AsyncStorage.getItem( '@isGuest' );
+			if ( value !== null )
+			{
+				setIsGuest(true)
+			} 
+		} catch ( error )
+		{
+			console.error(error)
+		} finally
+		{
+			setLoading(false)
+		}
+	}
 	
 	useEffect( () =>
 		{
-		  checkOnboarding()
+		checkOnboarding();
+		checkGuest();
 		  const subscription = async () =>
 		  {
 			 const token = SecureStore.getItem( 'accessToken' );
@@ -41,6 +60,8 @@ export const useOnboarding = () =>
 	return {
 		loading,
 		onboarding,
-		loggedUser
+		loggedUser,
+		setIsGuest,
+		isGuest
 	}
 }

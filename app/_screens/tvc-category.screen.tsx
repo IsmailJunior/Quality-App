@@ -1,5 +1,5 @@
 import { type FC, type ReactNode } from 'react';
-import { View, ScrollView, Text, StyleSheet, useWindowDimensions} from 'react-native';
+import { View, ScrollView} from 'react-native';
 import { FlashList } from '@shopify/flash-list';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -12,26 +12,24 @@ export const TvcCategoryScreen: FC = (): ReactNode =>
 	const _renderItem = ( { item }: any ) =>
 	{
 		return (
-			<View>{item}</View>
+			<View className='m-2 mx-auto'>{item}</View>
 		)
 	}
 	return (
-		<ScrollView contentContainerStyle={{flex: 1}}>
-			<View className='flex-1'>
-				<View style={{height: SCREEN_HEIGHT / 3}}>
-				<View style={StyleSheet.absoluteFill}>{ tvcCategory.assets.video }</View>
-				<LinearGradient
-            colors={['transparent','rgba(0,0,0,0.9)']}
-            style={{position: 'absolute', width: '100%', height: '100%'}}
-          />
-				</View>
-				<FlashList
+		<ScrollView>
+			<View style={ { height: SCREEN_HEIGHT / 2 } }>{tvcCategory.assets.video}</View>
+			<FlashList
 					data={ tvcCategory.assets.images }
-					numColumns={ 2 }
 					estimatedItemSize={ 200 }
 					renderItem={_renderItem}
-				/>	
-		</View>
+			/>	
+			<LinearGradient
+            colors={['transparent','rgba(0,0,0,0.6)']}
+            style={{position: 'absolute', width: '100%', height: '100%'}}
+			/>
+			<View className='p-8'>
+				<ThemedTextRight className='text-white text-lg font-bold'>{tvcCategory.description}</ThemedTextRight>
+			</View>
 		</ScrollView>
 	)
 }

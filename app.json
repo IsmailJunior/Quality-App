@@ -7,6 +7,7 @@
     "icon": "./app/_assets/images/adaptive-icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
+    "backgroundColor": "#000000",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": false
@@ -15,12 +16,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./app/_assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
-    },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./app/_assets/images/favicon.png"
+      },
+      "package": "com.anonymous.qualityapp"
     },
     "plugins": [
       "expo-router",
@@ -35,12 +32,57 @@
       ],
       "expo-secure-store",
       "expo-video",
-      "expo-localization"
+      [
+        "expo-asset",
+        {
+          "assets": [
+            "./app/_assets/images/graphic_design/auto_chicken.png",
+            "./app/_assets/images/graphic_design/dar_ala3rajy.png",
+            "./app/_assets/images/graphic_design/english_school.png",
+            "./app/_assets/images/graphic_design/global_degree.png",
+            "./app/_assets/images/graphic_design/high_class.png",
+            "./app/_assets/images/graphic_design/muhanad_alsudani.png",
+            "./app/_assets/images/graphic_design/tareeq_alsultan.png",
+            "./app/_assets/images/copy_writing/planing.png",
+            "./app/_assets/images/copy_writing/presenting.png",
+            "./app/_assets/images/copy_writing/writing_plan.png",
+            "./app/_assets/images/motion_graphic/iphone_3d.png",
+            "./app/_assets/images/motion_graphic/joystick_3d.png",
+            "./app/_assets/images/motion_graphic/monitor_3d.png",
+            "./app/_assets/images/motion_graphic/stage_3d.png",
+            "./app/_assets/images/motion_graphic/vr_3d.png",
+            "./app/_assets/images/tvc/hacking.png",
+            "./app/_assets/images/tvc/ipad.png",
+            "./app/_assets/images/tvc/private_lecture.png",
+            "./app/_assets/images/tvc/tests_lecture.png",
+            "./app/_assets/images/tvc/youtube_lecture.png",
+            "./app/_assets/images/web/4th_dim.jpeg",
+            "./app/_assets/images/web/masakin_website_featuers.jpeg",
+            "./app/_assets/images/web/masakin_website_hero.jpeg",
+            "./app/_assets/images/web/masakin_website_list.jpeg",
+            "./app/_assets/images/web/quality_website_brands.jpeg",
+            "./app/_assets/images/web/quality_website_card.jpeg",
+            "./app/_assets/images/web/quality_website_services.jpeg",
+            "./app/_assets/images/marketing/stats_1.jpeg",
+            "./app/_assets/images/marketing/stats_2.jpeg",
+            "./app/_assets/images/marketing/stats_3.jpeg",
+            "./app/_assets/images/marketing/stats_4.jpeg",
+            "./app/_assets/images/app_cat.png",
+            "./app/_assets/images/design_cat.png",
+            "./app/_assets/images/copy_cat.png",
+            "./app/_assets/images/marketing_cat.png",
+            "./app/_assets/images/motion_cat.png",
+            "./app/_assets/images/printing_cat.png",
+            "./app/_assets/images/reel_cat.png",
+            "./app/_assets/images/tvc_cat.png",
+            "./app/_assets/images/web_cat.png",
+            "./app/_assets/images/onboarding2.png",
+            "./app/_assets/images/onboarding3.png",
+            "./app/_assets/videos/composition.mp4"
+          ]
+        }
+      ]
     ],
-    "extra": {
-      "supportsRTL": true,
-      "forcesRTL": true
-    },
     "experiments": {
       "typedRoutes": true
     }

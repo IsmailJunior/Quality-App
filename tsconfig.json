@@ -14,5 +14,5 @@
     ".expo/types/**/*.ts",
     "expo-env.d.ts",
     "nativewind-env.d.ts"
-, "metro.config.js", "tailwind.config.ts", "babel.config.js"  ]
+, "metro.config.js", "tailwind.config.ts", "babel.config.js", "app/_components/ui/tab-bar-background.ios"  ]
 }
