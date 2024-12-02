@@ -2,7 +2,7 @@ import { type FC, type ReactNode } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SafeAreaView from 'react-native-safe-area-view';
 
-import { SignUpScreen } from '@/app/_screens/sign-up.screen';
+import { SignUpScreen } from '@/app/_screens/auth/sign-up.screen';
 
 const index: FC = (): ReactNode =>
 {

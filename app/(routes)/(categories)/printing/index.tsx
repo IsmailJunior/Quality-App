@@ -2,7 +2,7 @@ import { type FC, type ReactNode } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SafeAreaView from 'react-native-safe-area-view';
 
-import { PrintingCategoryScreen } from '@/app/_screens/printing.screen';
+import { PrintingCategoryScreen } from '@/app/_screens/categories/printing.screen';
 
 const index: FC = (): ReactNode =>
 {

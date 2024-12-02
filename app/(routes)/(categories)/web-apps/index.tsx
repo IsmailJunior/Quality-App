@@ -2,7 +2,7 @@ import { type FC, type ReactNode } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SafeAreaView from 'react-native-safe-area-view';
 
-import { WebAppsCategoryScreen } from '@/app/_screens/web-apps.screen';
+import { WebAppsCategoryScreen } from '@/app/_screens/categories/web-apps.screen';
 
 const index: FC = (): ReactNode =>
 {

@@ -2,7 +2,7 @@ import { type FC, type ReactNode } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SafeAreaView from 'react-native-safe-area-view';
 
-import { ReelCategoryScreen } from '@/app/_screens/reel.screen';
+import { ReelCategoryScreen } from '@/app/_screens/categories/reel.screen';
 
 const index: FC = (): ReactNode =>
 {
