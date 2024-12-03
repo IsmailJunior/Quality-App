@@ -28,8 +28,22 @@ const TabLayout: FC = (): ReactNode => {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: 'الرئيسية',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="work"
+        options={{
+          title: 'اعمالي',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="folder.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="analytics"
+        options={{
+          title: 'تحليلات',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="chart.bar.xaxis.ascending" color={color} />,
         }}
       />
     </Tabs>

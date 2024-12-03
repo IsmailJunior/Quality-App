@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
-import AsyncStorage from '@react-native-async-storage/async-storage'
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as SecureStore from 'expo-secure-store';
 
 export const useOnboarding = () =>
 {
-	const [ loggedUser, setLoggedUser ] = useState<boolean>( false );
-	const [ loading, setLoading ] = useState<boolean>( true );
-	const [ onboarding, setOnboarding ] = useState<boolean>( false );
-	const [ isGuest, setIsGuest ] = useState<boolean>( false );
+	const [ loggedUser, setLoggedUser ] = useState<boolean>( true );
+	const [ loading, setLoading ] = useState<boolean>( false );
+	const [ onboarding, setOnboarding ] = useState<boolean>( true );
+	const [ isGuest, setIsGuest ] = useState<boolean>( true );
 
 	const checkOnboarding = async () =>
 		{
@@ -45,17 +45,17 @@ export const useOnboarding = () =>
 		}
 	}
 	
-	useEffect( () =>
-		{
-		checkOnboarding();
-		checkGuest();
-		  const subscription = async () =>
-		  {
-			 const token = SecureStore.getItem( 'accessToken' );
-			 setLoggedUser( token ? true : false );
-		  }
-		  subscription();
-	}, [] )
+	// useEffect( () =>
+	// 	{
+	// 	checkOnboarding();
+	// 	checkGuest();
+	// 	  const subscription = async () =>
+	// 	  {
+	// 		 const token = SecureStore.getItem( 'accessToken' );
+	// 		 setLoggedUser( token ? true : false );
+	// 	  }
+	// 	  subscription();
+	// }, [] )
 	
 	return {
 		loading,

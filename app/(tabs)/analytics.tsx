@@ -1,18 +1,16 @@
 import { type FC, type ReactNode } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SafeAreaView from 'react-native-safe-area-view';
+import { HomeScreen } from '@/app/_screens/routes/home.screen';
 
-import { TvcCategoryScreen } from '@/app/_screens/categories/tvc-category.screen';
-
-const index: FC = (): ReactNode =>
+const Analytics: FC = (): ReactNode =>
 {
-	return (
-		<SafeAreaProvider>
+  return (
+    <SafeAreaProvider>
 		<SafeAreaView style={ { flex: 1 } } forceInset={ { top: 'always', bottom: 'always' } }>
-			<TvcCategoryScreen />
-		</SafeAreaView>
-	</SafeAreaProvider>
-	)
-};
-
-export default index;
+        <HomeScreen />
+      </SafeAreaView>
+    </SafeAreaProvider>	
+  );
+}
+export default Analytics;

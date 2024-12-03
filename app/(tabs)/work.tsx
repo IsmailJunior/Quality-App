@@ -4,7 +4,7 @@ import SafeAreaView from 'react-native-safe-area-view';
 
 import { AuthScreen } from '@/app/_screens/auth/auth.screen';
 
-const index: FC = (): ReactNode =>
+const Work: FC = (): ReactNode =>
 {
 	return (
 		<SafeAreaProvider>
@@ -15,4 +15,4 @@ const index: FC = (): ReactNode =>
 	)
 };
 
-export default index;
+export default Work;

@@ -5,7 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { ThemedTextRight } from '@/app/_components/ui/themed-text-right';
 import { tvcCategory } from '@/app/_constants/constants';
-import { SCREEN_HEIGHT } from '../_themes/app.constant';
+import { SCREEN_HEIGHT } from '@/app/_themes/app.constant';
 
 export const TvcCategoryScreen: FC = (): ReactNode =>
 {

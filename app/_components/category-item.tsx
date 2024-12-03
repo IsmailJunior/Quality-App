@@ -1,5 +1,5 @@
 import { type FC, type ReactNode} from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text } from 'react-native';
 import { Link } from 'expo-router';
 import Animated, {FadeIn, FadeOut} from 'react-native-reanimated'
 
