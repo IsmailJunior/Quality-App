@@ -5,9 +5,9 @@ export const ThemedButton: FC<{title: string ,isLoading?: boolean,buttonConfig: 
 {
 	return (
 		<TouchableOpacity disabled={isLoading} {...buttonConfig}>
-		<View className='bg-white px-4 py-1 my-2 text-center items-center rounded-lg'>
+		<View className='bg-white px-4 py-3 my-2 text-center items-center rounded-lg'>
 				{isLoading && <ActivityIndicator size='small' /> }
-				{!isLoading && <Text className='font-extrabold text-lg'>{title}</Text>}
+				{!isLoading && <Text className='font-extrabold text-xl'>{title}</Text>}
 		</View>
 		</TouchableOpacity>
 	)

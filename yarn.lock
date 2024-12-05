@@ -20,6 +20,11 @@
     "@jridgewell/gen-mapping" "^0.3.5"
     "@jridgewell/trace-mapping" "^0.3.24"
 
+"@animatereactnative/marquee@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@animatereactnative/marquee/-/marquee-0.3.1.tgz#321560e7ac52c3456deb5419e2baf6f258f9973f"
+  integrity sha512-3IFNkq2mmC2nv7lb/sRHqF1tINYAAqJZ19PGRKBSYG5rF3ZBj0KXx1UwK7cv2WF9fTY/fzzWhgwi2f3JqIjldQ==
+
 "@babel/code-frame@7.10.4", "@babel/code-frame@~7.10.4":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.10.4.tgz#168da1a36e90da68ae8d49c0f1b48c7c6249213a"
@@ -831,11 +836,6 @@
   dependencies:
     "@babel/helper-string-parser" "^7.25.9"
     "@babel/helper-validator-identifier" "^7.25.9"
-
-"@birdwingo/react-native-instagram-stories@^1.3.10":
-  version "1.3.10"
-  resolved "https://registry.yarnpkg.com/@birdwingo/react-native-instagram-stories/-/react-native-instagram-stories-1.3.10.tgz#07e50e5a3d482d5895a35f9905365f9241f570b1"
-  integrity sha512-YBqEvaBDxseKyja4H1utPwxOA43AB6BEV6cp64CIw/6BH3S/O3iiHTGHjG4B5nLBRgcKvLr0x2ax/2cGBjas1g==
 
 "@egjs/hammerjs@^2.0.17":
   version "2.0.17"
@@ -5648,6 +5648,11 @@ react-native-is-edge-to-edge@^1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/react-native-is-edge-to-edge/-/react-native-is-edge-to-edge-1.1.6.tgz#69ec13f70d76e9245e275eed4140d0873a78f902"
   integrity sha512-1pHnFTlBahins6UAajXUqeCOHew9l9C2C8tErnpGC3IyLJzvxD+TpYAixnCbrVS52f7+NvMttbiSI290XfwN0w==
+
+react-native-linear-gradient@^2.8.3:
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.8.3.tgz#9a116649f86d74747304ee13db325e20b21e564f"
+  integrity sha512-KflAXZcEg54PXkLyflaSZQ3PJp4uC4whM7nT/Uot9m0e/qxFV3p6uor1983D1YOBJbJN7rrWdqIjq0T42jOJyA==
 
 react-native-reanimated-skeleton@^1.5.1:
   version "1.5.1"

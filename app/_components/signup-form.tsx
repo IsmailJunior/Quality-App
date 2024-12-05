@@ -16,8 +16,8 @@ export const SignUpForm: FC = (): ReactNode =>
 	} = useContext( AuthContext );
 	
 	return (
-		<ScrollView className="p-2 mb-2">
-			<View className="w-full px-2">
+		<ScrollView className="mb-2">
+			<View className="w-full">
 				<Input
 					label="الاسم الاول"
 					error="يجب ادخال اسمك الاول"

@@ -8,7 +8,7 @@ export const Input: FC<{label: string, error: string, isValid: boolean,textInput
 	return (
 		<View className='mb-1'>
 			<ThemedTextRight className='text-xl'>{ label }</ThemedTextRight>
-			<TextInput className='border px-4 py-2 text-lg border-gray-500 text-white rounded-lg' placeholderTextColor='gray' { ...textInputConfig } />
+			<TextInput className='border px-4 py-3 text-lg border-gray-500 text-white rounded-lg' placeholderTextColor='gray' { ...textInputConfig } />
 			{ !isValid && <Text className='text-red-600 text-lg'>{error}</Text>}
 		</View>
 	)

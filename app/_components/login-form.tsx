@@ -16,8 +16,8 @@ export const LoginForm: FC = (): ReactNode =>
 	} = useContext( AuthContext );
 	
 	return (
-		<ScrollView className="p-2 mb-4">
-			<View className="w-full px-2">
+		<ScrollView className="mb-4">
+			<View className="w-full">
 				<Input
 					label="البريد الالكتروني"
 					error="البريد الالكتروني مطلوب"

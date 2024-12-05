@@ -4,12 +4,37 @@ import { SCREEN_HEIGHT, SCREEN_WIDTH } from "@/app/_themes/app.constant";
 
 import { VideoPlayer } from "@/app/_components/widgets/video-player";
 
+import FourthDim from '@/app/_assets/images/logos/4th.png';
+import AlBodoor from '@/app/_assets/images/logos/al_bodoor.png';
+import AlAlmeer from '@/app/_assets/images/logos/al-ameer.png';
+import AlArayes from '@/app/_assets/images/logos/al-arayes_mall.png';
+import BurAlbyan from '@/app/_assets/images/logos/burj_albyan.png';
+import FlyBaghdad from '@/app/_assets/images/logos/fly_baghdad.png';
+import GlobalDegree from '@/app/_assets/images/logos/global_degree.png';
+import Hammam from '@/app/_assets/images/logos/Hammam.png';
+import HighClass from '@/app/_assets/images/logos/high_class.png';
+import Lab from '@/app/_assets/images/logos/lab.png';
+import MahmoudElBaroudi from '@/app/_assets/images/logos/mahmoud_el-baroudi.png';
+import RajehBank from '@/app/_assets/images/logos/rajeh_bank.png';
+import RoyalBank from '@/app/_assets/images/logos/royal_school.png';
+import SultanRoad from '@/app/_assets/images/logos/sultan_road.png';
+
 const styles = StyleSheet.create({
 	category: {
 		width: 80,
 		height: 80,
 		borderRadius: 15,
 	},
+	mainLogo: {
+		width: 200,
+		height: 200,
+		marginRight: 10,
+	 },
+	logo: {
+		width: 100,
+		height: 100,
+		marginRight: 10,
+	 },
 	slide: {
 		width: SCREEN_WIDTH,
 		height: SCREEN_HEIGHT,
@@ -19,7 +44,27 @@ const styles = StyleSheet.create({
 		height: 400,
 		borderRadius: 10,
 	},
-});
+} );
+
+export const primaryMarqueeLogos = [
+	<Image contentFit='contain' style={styles.mainLogo} source={FourthDim} />,
+	<Image contentFit='contain' style={styles.mainLogo} source={AlBodoor} />,
+	<Image contentFit='contain' style={styles.mainLogo} source={AlArayes} />,
+	<Image contentFit='contain' style={styles.mainLogo} source={AlAlmeer} />,
+	<Image contentFit='contain' style={styles.mainLogo} source={BurAlbyan} />,
+	<Image contentFit='contain' style={styles.mainLogo} source={FlyBaghdad} />,
+	<Image contentFit='contain' style={styles.mainLogo} source={GlobalDegree} />,
+]
+
+export const secondaryMarqueeLogos = [
+	<Image contentFit="contain" style={styles.logo} source={Hammam} />,
+	<Image contentFit="contain" style={styles.logo} source={HighClass} />,
+	<Image contentFit="contain" style={styles.logo} source={Lab} />,
+	<Image contentFit="contain" style={styles.logo} source={MahmoudElBaroudi} />,
+	<Image contentFit="contain" style={styles.logo} source={RajehBank} />,
+	<Image contentFit="contain" style={styles.logo} source={RoyalBank} />,
+	<Image contentFit="contain" style={ styles.logo } source={ SultanRoad } />,
+]
 
 export const onBoardingSlides: onBoardingSlidesTypes[] = [
 	{
