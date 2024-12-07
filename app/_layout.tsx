@@ -39,7 +39,6 @@ const RootLayout: FC = (): ReactNode =>
 		<ThemeProvider value={DarkTheme}>
 			<Providers>
 			<Stack
-				screenOptions={{animation: 'fade'}}
 			>
 				<Stack.Screen name="(tabs)" options={{ headerShown: false, title: 'Home'}} />
 				<Stack.Screen
@@ -84,7 +83,7 @@ const RootLayout: FC = (): ReactNode =>
 				/>
 				<Stack.Screen
 					name="(routes)/auth/index"
-					options={{ title: "Auth" }}
+					options={{ title: "Auth", presentation: 'card'}}
 				/>
 				<Stack.Screen name="+not-found" />
 			</Stack>

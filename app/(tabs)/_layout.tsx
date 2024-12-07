@@ -8,8 +8,10 @@ import TabBarBackground from '@/app/_components/ui/tab-bar-background';
 import { Colors } from '@/app/_constants/Colors';
 import { useColorScheme } from '@/app/_hooks/use-color-scheme.hook';
 
-const TabLayout: FC = (): ReactNode => {
+const TabLayout: FC = (): ReactNode =>
+{
   const colorScheme = useColorScheme();
+
   return (
     <Tabs
       screenOptions={{
@@ -43,7 +45,7 @@ const TabLayout: FC = (): ReactNode => {
         name="analytics"
         options={{
           title: 'تحليلات',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="chart.bar.xaxis.ascending" color={color} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="chart.bar" color={color} />,
         }}
       />
     </Tabs>

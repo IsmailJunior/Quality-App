@@ -1,48 +1,30 @@
-import { type FC, type ReactNode, useEffect} from 'react';
-import { View, TouchableOpacity } from 'react-native';
+import { type FC, type ReactNode} from 'react';
+import { View, TouchableOpacity, Text } from 'react-native';
+import { router } from 'expo-router';
 import Animated, {FadeInUp, FadeOut} from 'react-native-reanimated';
-import { router} from 'expo-router';
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import * as SecureStore from 'expo-secure-store'
-import Skeleton from 'react-native-reanimated-skeleton';
 
 import { Cards } from '@/app/_components/ui/cards';
-import { ThemedTextRight } from '@/app/_components/ui/themed-text-right';
 import { Categories } from '@/app/_components/widgets/categories';
 import { Marquees } from '@/app/_components/widgets/marquees';
 import { SocialMedia } from '@/app/_components/widgets/social-media';
+import { RowSkeleton } from '@/app/_components/row-skeleton';
 
-import { getMe } from '@/app/_services/user';
+import { useOnboarding } from '@/app/_hooks/use-onboarding.hook';
 import { useUi } from '@/app/_hooks/use-ui';
 import { categories} from '@/app/_constants/constants';
 
 export const HomeScreen: FC = (): ReactNode =>
 {
 	const { isLoading, cards } = useUi();
-	
-	const clearStore = async () =>
-		{
-		await AsyncStorage.removeItem( '@onboarding' );
-		router.replace( '/(routes)/onboarding' );
-	}
-	const clearAuthStore = async () =>
+	const onClearStorePressed = async () =>
 	{
-		await AsyncStorage.removeItem( '@isGuest' );
-		await SecureStore.deleteItemAsync( 'accessToken' );
-		router.replace('/(routes)/auth')
+		router.replace( '/onboarding' );
 	}
-
-	useEffect( () =>
-	{
-		const getMyData = async () =>
-		{
-			await getMe();
-		};
-		getMyData()
-	}, [])
-	
 	return (
-		<Animated.ScrollView entering={FadeInUp.duration(800)} exiting={FadeOut.duration(800)}>
+		<Animated.ScrollView
+			className='mb-20'
+			entering={ FadeInUp.duration( 800 ) }
+			exiting={ FadeOut.duration( 800 ) }>
 			<Categories categories={ categories } />
 			<View className='mx-4 mt-16'>
 				<Animated.Text
@@ -50,35 +32,14 @@ export const HomeScreen: FC = (): ReactNode =>
 					exiting={ FadeOut.duration( 800 ) }
 					className='font-extrabold text-3xl text-white'>Featured</Animated.Text>
 			</View>
-			<Skeleton
-				containerStyle={ { flex: 1, flexDirection: 'row' } }
-				animationType='pulse'
-				isLoading={ isLoading }
-				layout={ [
-					{key: 'card1', width: 250, height: 250, margin: 4, borderRadius: 8},
-					{key: 'card1', width: 250, height: 250, margin: 4, borderRadius: 8},
-					{key: 'card1', width: 250, height: 250, margin: 4, borderRadius: 8},
-					{key: 'card1', width: 250, height: 250, margin: 4, borderRadius: 8},
-					{key: 'card1', width: 250, height: 250, margin: 4, borderRadius: 8},
-				]}
-			>
-			</Skeleton>
+			<RowSkeleton isLoading={isLoading} />
 			{ !isLoading && <Cards cards={ cards } /> }
 			<Marquees />
 			<SocialMedia />
-			<View className='m-12'>
-				<ThemedTextRight className='text-white'>الصفحة الرئيسية</ThemedTextRight>
-			<TouchableOpacity onPress={clearStore}>
-			<ThemedTextRight className='text-white'>
-				اعادة تشغيل				
-			</ThemedTextRight>			
-			</TouchableOpacity>		
-			<TouchableOpacity onPress={clearAuthStore}>
-			<ThemedTextRight className='text-white'>
-						تسجيل الدخول
-			</ThemedTextRight>			
-			</TouchableOpacity>		
-		</View>
+
+			<TouchableOpacity className='flex-1 justify-center items-center' onPress={onClearStorePressed}>
+				<Text className='text-white font-semibold text-3xl'>تنظيف المخزن</Text>
+			</TouchableOpacity>
 		</Animated.ScrollView>
 	)
 }

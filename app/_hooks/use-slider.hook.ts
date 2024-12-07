@@ -6,7 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { onBoardingSlides } from '@/app/_constants/constants';
 
-export const useOnboardingSlider = () =>
+export const useSlider = () =>
 {
 	const [ currentIndex, setCurrentIndex ] = useState( 0 );
 	const scrollX = useRef( new Animated.Value( 0 ) ).current;

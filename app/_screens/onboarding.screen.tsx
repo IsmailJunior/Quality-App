@@ -1,6 +1,6 @@
 import {type FC, type ReactNode} from 'react';
 import { Animated, View, StyleSheet} from 'react-native';
-import { useOnboardingSlider } from '@/app/_hooks/use-onboarding-slider.hook';
+import { useSlider } from '@/app/_hooks/use-slider.hook';
 import { Slider } from '@/app/_components/widgets/slider';
 
 export const OnboardingScreen: FC = (): ReactNode =>
@@ -11,7 +11,7 @@ export const OnboardingScreen: FC = (): ReactNode =>
 		slidesRef,
 		viewableItemsChanged,
 		viewConfig,
-		onBoardingSlides } = useOnboardingSlider();
+		onBoardingSlides } = useSlider();
 	
 	const _renderItem = ( { item }: any ) =>
 	{

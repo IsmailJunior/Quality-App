@@ -11,15 +11,15 @@ export const AuthScreen: FC = (): ReactNode =>
 	const toggleSignup = () => setIsSignup( prevState => !prevState );
 
 	return (
-		<ScrollView>
+		<ScrollView showsVerticalScrollIndicator={false}>
 			<View className="flex flex-row justify-center items-center bg-white p-6 rounded-b-3xl">
 			<Switch
-				trackColor={ { false: 'gray', true: 'green' } }
-				thumbColor={isSignup ? 'green' : 'gray'}
+				 thumbColor={isSignup ? 'white' : '#f4f3f4'}
+				 ios_backgroundColor="#f4f3f4"
 				onValueChange={ toggleSignup }
 				value={ isSignup }
 				/>
-				<ThemedTextRight className="text-xl font-extrabold text-black">انشاء حساب</ThemedTextRight>
+				<ThemedTextRight className="text-xl font-extrabold ml-3 text-black">انشاء حساب</ThemedTextRight>
 			</View>
 			<View className="px-6 my-4">
 			<HeaderTextRight>{isSignup ? "انشاء حساب" : "تسجيل الدخول"}</HeaderTextRight>

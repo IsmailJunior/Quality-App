@@ -1,15 +1,21 @@
 import { type FC, type ReactNode } from 'react';
+import { ActivityIndicator, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SafeAreaView from 'react-native-safe-area-view';
 
-import { ReelCategoryScreen } from '@/app/_screens/categories/reel.screen';
+import { useUser } from '@/app/_hooks/use-user';
+import { ReelData } from '@/app/_screens/categories/reel/reel-data';
+import { ReelCategoryScreen } from '@/app/_screens/categories/reel/reel.screen';
 
 const index: FC = (): ReactNode =>
 {
+	const { isSubscribed, isLoading } = useUser();
 	return (
 		<SafeAreaProvider>
 		<SafeAreaView style={ { flex: 1 } } forceInset={ { top: 'always', bottom: 'always' } }>
-			<ReelCategoryScreen />
+		{ isLoading &&  <View className='flex-1 justify-center items-center'><ActivityIndicator size='large' /></View>}
+				{ ( !isLoading && isSubscribed ) && <ReelData /> }
+				{ ( !isLoading && !isSubscribed ) && <ReelCategoryScreen /> }
 		</SafeAreaView>
 	</SafeAreaProvider>
 	)

@@ -2,8 +2,7 @@ import { type FC, type ReactNode } from 'react';
 import { View, ScrollView} from 'react-native';
 import { FlashList } from '@shopify/flash-list';
 import { LinearGradient } from 'expo-linear-gradient';
-import Animated, {FadeInUp, FadeOut} from 'react-native-reanimated'
-
+import Animated, { FadeInUp, FadeOut } from 'react-native-reanimated';
 
 import { ThemedTextRight } from '@/app/_components/ui/themed-text-right';
 import { graphicDesignCategory } from '@/app/_constants/constants';

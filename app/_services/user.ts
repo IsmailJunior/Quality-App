@@ -1,12 +1,10 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { client } from '@/app/_utils/axios';
 
-export const getMe = async () =>
+export const getUser = async (param: string) =>
 {
 	try
 	{
-		const { data } = await client.get( 'users/me' );
-		await AsyncStorage.setItem('@bundleId', data.data.doc.bundles[0])
+		const { data } = await client.get(param);
 		return data;
 	} catch ( error )
 	{

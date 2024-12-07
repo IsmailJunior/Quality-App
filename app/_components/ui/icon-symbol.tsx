@@ -11,7 +11,7 @@ const MAPPING = {
   // See SF Symbols in the SF Symbols app on Mac.
   'house.fill': 'home',
   'folder.fill': 'folder',
-  'chart.bar.xaxis.ascending': 'insert-chart',
+  'chart.bar': 'insert-chart',
   'chevron.right': 'chevron-right',
 } as Partial<
   Record<

@@ -45,17 +45,19 @@ export const useOnboarding = () =>
 		}
 	}
 	
-	// useEffect( () =>
-	// 	{
-	// 	checkOnboarding();
-	// 	checkGuest();
-	// 	  const subscription = async () =>
-	// 	  {
-	// 		 const token = SecureStore.getItem( 'accessToken' );
-	// 		 setLoggedUser( token ? true : false );
-	// 	  }
-	// 	  subscription();
-	// }, [] )
+	useEffect( () =>
+	{
+		setLoading( true );
+		checkOnboarding();
+		checkGuest();
+		  const subscription = () =>
+		  {
+			 const token = SecureStore.getItem( 'accessToken' );
+			  setLoggedUser( token ? true : false );
+			  setLoading( false );
+		  }
+		  subscription();
+	}, [] )
 	
 	return {
 		loading,
